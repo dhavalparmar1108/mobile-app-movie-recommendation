@@ -4,6 +4,7 @@ class Api
 {
   static const String baseURL = "https://movie-recommendation-8tym.onrender.com/";
   static const String movieDBURL = "https://api.themoviedb.org/3/movie/";
+  static const String movieDBCollectionURL = "https://api.themoviedb.org/3/";
   static const String baseLocalURL = "http://192.168.0.101:5000/";
   static const String getMovies = "fetch-movies";
   static const String getMoviesSuggestions = "fetch-suggestions";
@@ -27,5 +28,10 @@ class Api
   /// Fetch movie credits
   static Future<dynamic> fetchMovieCredits({required int id}) async {
     return await ApiServiceTMDB().get("${movieDBURL}${id}/credits");
+  }
+
+  /// Fetch movie credits
+  static Future<dynamic> fetchMovieCollection({required int id}) async {
+    return await ApiServiceTMDB().get("${movieDBCollectionURL}/collection/$id");
   }
 }

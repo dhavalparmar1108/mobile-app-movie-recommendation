@@ -35,7 +35,7 @@ class _RecommendationsState extends State<Recommendations> {
                 return InkWell(
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context) => MovieDetails(id:
-                    widget.moviesList.recommendations!.recommendedId!.elementAt(idx))));
+                    widget.moviesList.recommendedId!.elementAt(idx))));
                   },
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(12.w, 4.h, 4.h, 12.w),
@@ -43,24 +43,24 @@ class _RecommendationsState extends State<Recommendations> {
                       children: [
                         Align(
                           alignment: Alignment.topLeft,
-                          child: SelectableText("${idx+1}. "+ widget.moviesList.recommendations!.recommendedMovies!.elementAt(idx),
+                          child: SelectableText("${idx+1}. "+ widget.moviesList.recommendedMovies!.elementAt(idx),
                               style: GoogleFonts.raleway(fontSize: 20.sp, fontWeight: FontWeight.bold,),
                           ),
                         ),
                         ClipRRect(
                             borderRadius: BorderRadius.circular(30),
-                            child: InteractiveViewer(child: Image.network(widget.moviesList.recommendations!.recommendedPosters!.elementAt(idx)))),
+                            child: InteractiveViewer(child: Image.network(widget.moviesList.recommendedPosters!.elementAt(idx)))),
 
                         SizedBox(height: 5.h,),
                         SelectableText(
-                            widget.moviesList.recommendations!.recommendedOverview!.elementAt(idx), style: GoogleFonts.nunitoSans(
+                            widget.moviesList.recommendedOverview!.elementAt(idx), style: GoogleFonts.nunitoSans(
                             fontSize: 18.sp
                         )),
                         SizedBox(height: 10.h,),
                         Align(
                           alignment: Alignment.topLeft,
                           child: SelectableText(
-                              widget.moviesList.recommendations!.recommendedGenre!.elementAt(idx), style: GoogleFonts.nunitoSans(
+                              widget.moviesList.recommendedGenre!.elementAt(idx), style: GoogleFonts.nunitoSans(
                               fontWeight: FontWeight.bold, fontSize: 18.sp
                           )),
                         ),
@@ -69,7 +69,7 @@ class _RecommendationsState extends State<Recommendations> {
                     ),
                   ),
                 );
-              }, itemCount: widget.moviesList.recommendations!.recommendedMovies!.length,),
+              }, itemCount: widget.moviesList.recommendedMovies!.length,),
             ),
           ],
         )
