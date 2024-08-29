@@ -142,16 +142,17 @@ class AppThemes
           iconColor: Colors.white
         ),
         cardTheme: CardTheme(
-          color: Colors.blueGrey,
+
           shape: RoundedRectangleBorder(
               side: const BorderSide(
-                  color: Colors.orange
+                  color: Colors.grey
               ),
               borderRadius: BorderRadius.circular(8)
           ),
         ),
-        textTheme: const TextTheme(
-            bodyText2: TextStyle(color: Colors.white)
+        textTheme: TextTheme(
+            bodyMedium: TextStyle(color: Colors.white),
+            headlineMedium: GoogleFonts.montserrat(color : Colors.white)
         )
     );
   }

@@ -8,7 +8,7 @@ import '../common_utilites/common_functions.dart';
 class ApiService
 {
   var _options = BaseOptions(
-    baseUrl: Api.baseLocalURL,
+    baseUrl: Api.baseURL,
     connectTimeout: Duration(seconds: 8),
     receiveTimeout: Duration(seconds: 10),
   );
@@ -60,6 +60,10 @@ class ApiServiceTMDB
 
   Future<Response> get(String route , {Map<String, dynamic>? params, String? baseUrl})
   async {
+    if(baseUrl != null)
+      {
+        _dio.options.baseUrl = baseUrl;
+      }
     Response response;
     if(params != null)
     {
