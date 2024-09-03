@@ -1,7 +1,7 @@
 # Cirama
 
 ## Overview
-
+ 
 The **Cirama** is a cross-platform mobile application built using Flutter. It leverages machine learning to provide personalized movie recommendations, offering users a rich experience with comprehensive movie information, including cast details, trailers, and teasers.
 
 This is the [link](https://github.com/dhavalparmar1108/Movie_Recommendation.git) for github repo which contains python code to create an REST API using Flask framework. This repo has all the documentation on how to create an host flask APP.

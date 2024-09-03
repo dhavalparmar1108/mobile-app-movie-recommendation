@@ -507,6 +507,12 @@ class _MovieHomePageState extends State<MovieHomePage> {
         List<MovieResultsModel> movies = (response.data['results'] as List)
             .map((e) => MovieResultsModel.fromJson(e as Map<String, dynamic>))
             .toList();
+
+        if(movies.isEmpty)
+          {
+            CommonFunctions().showToast("We don't have this movie!");
+            return;
+          }
         CustomNavigation.push(context, SeeAll(movieResultsModel: movies));
       }
       else
