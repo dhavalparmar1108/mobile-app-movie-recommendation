@@ -14,7 +14,6 @@ class CustomInterceptors extends Interceptor {
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) async {
     CommonFunctions.printLog('RESPONSE[${response.statusMessage}] => PATH: ${response.requestOptions.path}');
-    CommonFunctions.printLog("- ${jsonEncode(response.data)}");
     return super.onResponse(response, handler);
   }
 

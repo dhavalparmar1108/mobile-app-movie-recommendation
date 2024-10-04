@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CommonWidgets
 {
@@ -18,4 +19,13 @@ class CommonWidgets
       ),
     );
   }
+
+  TableRow TableSpacing()
+  {
+    return TableRow(
+      children: [
+        SizedBox(height: 5.h),
+        SizedBox(height: 5.h,)// Adds spacing between rows
+      ],
+    );  }
 }
